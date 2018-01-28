@@ -24,22 +24,22 @@ n_info(1,3) = 3;    % Starting degree of 3 (3--1,2,4)
 n_info(1,4) = 3;    % Starting degree of 3 (4--1,2,3)
 
 % Initiating adjacency matrix
-adj_matrix = zeros(population);
-adj_matrix(1,2) = 1;    % Linking starting nodes
-adj_matrix(1,3) = 1;    % Linking starting nodes
-adj_matrix(1,4) = 1;    % Linking starting nodes
+adjacency = zeros(population);
+adjacency(1,2) = 1;    % Linking starting nodes
+adjacency(1,3) = 1;    % Linking starting nodes
+adjacency(1,4) = 1;    % Linking starting nodes
 
-adj_matrix(2,1) = 1;    % Linking starting nodes
-adj_matrix(2,3) = 1;    % Linking starting nodes
-adj_matrix(2,4) = 1;    % Linking starting nodes
+adjacency(2,1) = 1;    % Linking starting nodes
+adjacency(2,3) = 1;    % Linking starting nodes
+adjacency(2,4) = 1;    % Linking starting nodes
 
-adj_matrix(3,1) = 1;    % Linking starting nodes
-adj_matrix(3,2) = 1;    % Linking starting nodes
-adj_matrix(3,4) = 1;    % Linking starting nodes
+adjacency(3,1) = 1;    % Linking starting nodes
+adjacency(3,2) = 1;    % Linking starting nodes
+adjacency(3,4) = 1;    % Linking starting nodes
 
-adj_matrix(4,1) = 1;    % Linking starting nodes
-adj_matrix(4,2) = 1;    % Linking starting nodes
-adj_matrix(4,3) = 1;    % Linking starting nodes
+adjacency(4,1) = 1;    % Linking starting nodes
+adjacency(4,2) = 1;    % Linking starting nodes
+adjacency(4,3) = 1;    % Linking starting nodes
 
 % Updating adjacency matrix when adding a new node
 while n_count < population
@@ -61,8 +61,8 @@ while n_count < population
             new_edge_count = new_edge_count + 1;
             % update adj matrix with new node
                 % Remember: adj matrix already hosts all possibly nodes
-            adj_matrix(n,n_count+1) = 1; 
-            adj_matrix(n_count+1,n) = 1;
+            adjacency(n,n_count+1) = 1; 
+            adjacency(n_count+1,n) = 1;
         end
     end
     % append new edge count to node info table
