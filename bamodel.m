@@ -72,4 +72,4 @@ end
 %ward_n_info{ward} = n_info;
 %ward_adj_matrix{ward} = adj_matrix;
 clear n_rand new_edge_count n n_count n_prob population;
-save('adj_matrix');
+save('adjacency');
